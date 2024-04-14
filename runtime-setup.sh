@@ -5,6 +5,11 @@ if [ -f /etc/ssh/setup-complete ]; then
   exit 0
 fi
 
+# Create a tunnel user
+adduser -D $TUNNEL_USER
+
+# Unlock the user account for login
+passwd -u $TUNNEL_USER
 
 echo : Running setup\n: Writing config
 

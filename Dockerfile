@@ -9,12 +9,6 @@ ENV TUNNEL_PUBLIC_KEY='Dont forget to set your pubkey'
 RUN apk add --no-cache \
   openssh
 
-# Create a user
-RUN adduser -D ${TUNNEL_USER}
-
-# Unlock the user account for login
-RUN passwd -u ${TUNNEL_USER}
-
 # lets add the setup
 COPY runtime-setup.sh /runtime-setup.sh
 
