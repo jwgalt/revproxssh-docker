@@ -2,6 +2,9 @@
 
 ## Running the container
 
+Pull the container with 
+```docker pull jgalt042/revproxssh```
+
 On first run the container will run runtime-setup.sh which will add config and your pubkey for authentication.
 Add your desired username port and pubkey to the docker env with these variables:
 ```
